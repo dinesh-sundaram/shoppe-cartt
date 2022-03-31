@@ -23,7 +23,7 @@ SECRET_KEY = '8061(w*8an7*ld*!n=cbu%@r!*-iwkt*8fmq#zcxcb79(u&705'
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 
-ALLOWED_HOSTS = ['shoppe-cartte.herokuapp.com']
+ALLOWED_HOSTS = ['shoppe-cartte.herokuapp.com', '127.0.0.1'] 
 
 # Application definition
 
@@ -54,6 +54,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'LeFarm.urls'
 
 CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 DATABASES = {
