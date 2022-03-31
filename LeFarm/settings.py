@@ -14,11 +14,15 @@ from pathlib import Path
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
+SECRET_KEY = 'l-fvs-md!(j-d#be!+-@vp=@q)&7k*is@og_dl0dhw*=ev)d_k'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
+
+
+ALLOWED_HOSTS = ['shoppe-cartt.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
@@ -50,6 +54,16 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'LeFarm.urls'
 
 CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        'HOSTNAME' : 'localhost',
+    }
+}
+
 
 TEMPLATES = [
     {
