@@ -16,7 +16,8 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = '8061(w*8an7*ld*!n=cbu%@r!*-iwkt*8fmq#zcxcb79(u&705'
+# os.environ['SECRET_KEY']
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -33,7 +34,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'whitenoise',
     'corsheaders',
     'rest_framework',
     'LeFarmCart',
@@ -60,7 +60,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-        'HOSTNAME' : 'localhost',
     }
 }
 
@@ -124,10 +123,9 @@ STATIC_URL = 'static/'
 # STATIC_ROOT = [BASE_DIR / 'static']
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-STATICFILES_DIRS = [ BASE_DIR / 'build/static',
-]
+STATICFILES_DIRS = [ BASE_DIR / 'build/static',]
 
 # if DEBUG: 
 #     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'build/static')] 
